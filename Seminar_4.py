@@ -10,3 +10,4 @@ elif (number == 3):
 elif (number == 4):
     print("(X > 0  и  Y < 0)")
 else:print("Нужно ввести меньше 4")
+
