@@ -1,7 +1,25 @@
-# 6. Пример проверки ложности утверждения (x ≡ z ) ∨ (x → (y ∧ z))
+# 1. В файле находится N натуральных чисел, записанных через пробел.
+#    Среди чисел не хватает одного, чтобы выполнялось условие
+#    A[i] - 1 = A[i-1]. Найдите это число.
 
-for x in range(2):
-    for y in range(2):
-        for z in range(2):
-            if not (x == z or x <= y and z):
-                print(x, y, z)
+import random
+
+
+def getArr():
+    path = 'lesson/ls005/n.txt'
+    data = open(path, 'r')
+    arr = list(map(int, (data.readline().split(' '))))
+    data.close()
+
+    arr.remove(random.choice(arr))
+    print(arr)
+    return arr
+
+
+def checkArr2(arr):
+    if arr[0] != 0:
+        return 0
+    for i in range(1, len(arr)):
+        if (arr[i] - 1) != arr[i - 1]:
+            return (arr[i]) - 1
+    return -1
