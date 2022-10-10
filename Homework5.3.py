@@ -1,3 +1,5 @@
+# Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
+# Входные и выходные данные хранятся в отдельных текстовых файлах.
 def coding(txt):
     with open('text_words.txt', 'w') as data:
         data.write(s)
@@ -15,7 +17,7 @@ def coding(txt):
 
 def decoding(txt):
     with open('text_code_words.txt', 'r') as data:
-        my_text = data.read()
+        data.read()
     with open('text_code_words.txt', 'w') as data:
         data.write(txt)
     number = ''
@@ -33,3 +35,18 @@ def decoding(txt):
 s = input("Введите текст для кодировки: ")
 print(f"Текст после кодировки: {coding(s)}")
 print(f"Текст после дешифровки: {decoding(coding(s))}")
+
+# with open(name, "r", encoding="utf-8") as my_f_1, \
+#         open(name_2, "a", encoding="utf-8") as my_f_2:
+#     data = my_f_1.readline()
+#     count = ''
+#     decoding = ''
+#     for char in data:
+#         if char.isdigit:
+#             count = char
+#         else:
+#             decoding += char * int(count)
+#             count = ''
+#     my_f_2.write(decoding)
+#     print(f'Check the file {name_2}')
+#     return ''
