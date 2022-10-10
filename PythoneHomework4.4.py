@@ -3,7 +3,6 @@
 from random import randint, choice, uniform
 
 def roots_equ(a, k, sign):
-
         with open("new.txt", "a", encoding="utf-8") as my_f:
             while k >= 1:
                 my_f.write(f"({a}x ** {k})){sign}")
